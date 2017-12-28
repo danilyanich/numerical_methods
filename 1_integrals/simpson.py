@@ -1,4 +1,5 @@
 import math
+import matplotlib.pyplot as plt
 
 
 def f_x(x):
@@ -24,4 +25,9 @@ if __name__ == '__main__':
     print('h: {}'.format(h))
     print('n: {}'.format(n))
     print('I: {}'.format(I))
+
+    x = [a + h*k for k in range(0, n)]
+    plt.plot(x, [f_x(x_i) for x_i in x])
+    plt.plot([a, b], [I, I])
+    plt.show()
 
